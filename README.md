@@ -1,3 +1,3 @@
 # Pangolin
 
-Ir a "http://localhost:51820"
+Modificar los dos archivos que hay en config/traefik/
