@@ -6,6 +6,9 @@ services:
     restart: unless-stopped
     volumes:
       - ./config:/app/config
+    environment:
+      - APP_DASHBOARDURL=https://proxy.example.net
+      - APP_BASEDOMAIN=example.net      
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:3001/api/v1/"]
       interval: "3s"
