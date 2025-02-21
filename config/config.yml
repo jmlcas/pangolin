@@ -1,6 +1,6 @@
 app:
-    dashboard_url: "https://example.com"
-    base_domain: "example.com"
+    dashboard_url: "https://example.com"    # Cambia por tu dominio o subdominio
+    base_domain: "example.com"              # Cambia por tu dominio base
     log_level: "info"
     save_logs: false
 
@@ -21,7 +21,7 @@ traefik:
 
 gerbil:
     start_port: 51820
-    base_endpoint: "example.com"
+    base_endpoint: "example.com"       # Cambia por tu dominio
     use_subdomain: false
     block_size: 24
     site_block_size: 30
@@ -41,8 +41,8 @@ email:
 
 users:
     server_admin:
-        email: "admin@example.com"
-        password: "Password123!"
+        email: "admin@example.com"        # Puedes cCambiarlo por tu e-mail
+        password: "Password123!"          # Puedes cambialo por tu password
 
 flags:
     require_email_verification: true
