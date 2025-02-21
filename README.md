@@ -2,4 +2,4 @@
 
 Modificar los dos archivos que hay en config/traefik/
 
-Modificar el archivo config.yml
+Modificar el archivo config/config.yml
