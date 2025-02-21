@@ -8,4 +8,4 @@ Login:
 
 email: "admin@example.com" 
         
-password: "Password123!"
+password: "Password123!"  Si no los has modificado
