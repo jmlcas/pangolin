@@ -6,7 +6,9 @@ $ wget -O installer "https://github.com/fosrl/pangolin/releases/download/1.0.0/i
 
 $ sudo ./installer
 
+
 [![Alt text](https://img.youtube.com/vi/i9AmiJPjqUQ/0.jpg)](https://www.youtube.com/watch?v=i9AmiJPjqUQ)
+
 
 
 ## Instalar con docker compose:
