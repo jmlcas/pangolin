@@ -1,8 +1,14 @@
 app:
-    dashboard_url: "https://example.com"    # Cambia por tu dominio o subdominio
-    base_domain: "example.com"              # Cambia por tu dominio base
+    dashboard_url: "https://example.com"    # Cambia por tu dominio o subdominio    
     log_level: "info"
     save_logs: false
+
+domains:
+    domain1:
+        base_domain: "example.com"           # Cambia por tu dominio base
+        cert_resolver: "letsencrypt"
+        prefer_wildcard_cert: false
+    
 
 server:
     external_port: 3000
@@ -17,7 +23,6 @@ traefik:
     cert_resolver: "letsencrypt"
     http_entrypoint: "web"
     https_entrypoint: "websecure"
-    prefer_wildcard_cert: true
 
 gerbil:
     start_port: 51820
