@@ -9,7 +9,6 @@ $ sudo ./installer
 ```
 <br>
 
-<br>
 NOTA. Mira antes la versión actual: https://docs.fossorial.io/Getting%20Started/quick-install
 
 <br>
