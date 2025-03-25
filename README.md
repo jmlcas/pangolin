@@ -3,7 +3,7 @@
 ## Comandos para instalar el script:
 
 ```
-$ wget -O installer "https://github.com/fosrl/pangolin/releases/download/1.0.0/installer_linux_$(uname -m | sed 's/x86_64/amd64/;s/aarch64/arm64/')" && chmod +x ./installer
+$ wget -O installer "https://github.com/fosrl/pangolin/releases/download/1.1.0/installer_linux_$(uname -m | sed 's/x86_64/amd64/;s/aarch64/arm64/')" && chmod +x ./installer
 
 $ sudo ./installer
 ```
