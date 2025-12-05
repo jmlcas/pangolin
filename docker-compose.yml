@@ -23,7 +23,6 @@ services:
       - --reachableAt=http://gerbil:3003
       - --generateAndSaveKeyTo=/var/config/key
       - --remoteConfig=http://pangolin:3001/api/v1/gerbil/get-config
-      - --reportBandwidthTo=http://pangolin:3001/api/v1/gerbil/receive-bandwidth
     volumes:
       - ./config/:/var/config
     cap_add:
@@ -31,12 +30,12 @@ services:
       - SYS_MODULE
     ports:
       - 51820:51820/udp
-      - 8080:8080 
+      - 21820:21820/udp 
       - 443:443 
       - 80:80 
 
   traefik:
-    image: traefik:v3.3.3
+    image: traefik:v3.6
     container_name: traefik
     restart: unless-stopped
     network_mode: service:gerbil 
@@ -53,3 +52,4 @@ networks:
   default:
     driver: bridge
     name: pangolin
+    enable_ipv6: true
