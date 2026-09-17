@@ -13,11 +13,6 @@ NOTA. Mira antes la versión actual: https://docs.fossorial.io/Getting%20Started
 
 <br>
 
-<br>
-
-[![Alt text](https://img.youtube.com/vi/i9AmiJPjqUQ/0.jpg)](https://www.youtube.com/watch?v=i9AmiJPjqUQ)
-
-<br>
 
 ## Instalar con docker compose:
 
