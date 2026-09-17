@@ -13,11 +13,15 @@ experimental:
   plugins:
     badger:
       moduleName: "github.com/fosrl/badger"
-      version: "v1.0.0-beta.3"
+      version: "v1.4.0"
 
 log:
   level: "INFO"
   format: "common"
+  maxSize: 100
+  maxBackups: 3
+  maxAge: 3
+  compress: true 
 
 certificatesResolvers:
   letsencrypt:
@@ -39,6 +43,12 @@ entryPoints:
     http:
       tls:
         certResolver: "letsencrypt"
-
+      encodedCharacters:
+        allowEncodedSlash: true
+        allowEncodedQuestionMark: true
+        
 serversTransport:
   insecureSkipVerify: true
+
+ping:
+  entryPoint: "web"  
