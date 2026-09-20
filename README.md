@@ -16,9 +16,21 @@ NOTA. Mira antes la versión actual: https://docs.fossorial.io/Getting%20Started
 
 ## Instalar con docker compose:
 
-Modificar los dos archivos que hay en config/traefik/
+Reemplaza estos valores antes de iniciar:
 
-Modificar el archivo config/config.yml
+pangolin.example.com - con el nombre de host de su panel de control
+
+example.com - con su dominio base
+
+replace-with-a-long-random-secret - con un fuerte secreto aleatorio
+
+admin@example.com - en traefik_config.yml - tu correo electrónico de Let's Encrypt
+
+-----------------------------------
+
+Genera un secreto con el comando : openssl rand -hex 32
+
+-----------------------------------
 
 Login:
 
