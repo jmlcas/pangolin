@@ -13,7 +13,7 @@ domains:
         base_domain: "example.com" # REPLACE WITH YOUR BASE DOMAIN
 
 server:
-    secret: "replace-with-a-long-random-secret" # REPLACE WITH SECURE SECRET
+    secret: 5bcdf06621694dabeccd9b91537443d725aed994bf8bffbd4069589ec206eaec # REPLACE WITH SECURE SECRET
     cors:
         origins: ["https://pangolin.example.com"] # REPLACE WITH YOUR DASHBOARD DOMAIN
         methods: ["GET", "POST", "PUT", "DELETE", "PATCH"]
