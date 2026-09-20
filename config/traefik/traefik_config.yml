@@ -13,7 +13,7 @@ experimental:
   plugins:
     badger:
       moduleName: "github.com/fosrl/badger"
-      version: "v1.4.0"
+      version: "v1.4.0" # Check github.com/fosrl/badger for the latest release.
 
 log:
   level: "INFO"
@@ -21,14 +21,14 @@ log:
   maxSize: 100
   maxBackups: 3
   maxAge: 3
-  compress: true 
+  compress: true
 
 certificatesResolvers:
   letsencrypt:
     acme:
       httpChallenge:
         entryPoint: web
-      email: admin@example.com    # Cambia por tu email
+      email: "admin@example.com" # REPLACE
       storage: "/letsencrypt/acme.json"
       caServer: "https://acme-v02.api.letsencrypt.org/directory"
 
@@ -40,15 +40,18 @@ entryPoints:
     transport:
       respondingTimeouts:
         readTimeout: "30m"
+    # Uncomment to enable HTTP/3. You must also expose 443/udp in docker-compose.yml.
+    # http3:
+    #   advertisedPort: 443
     http:
       tls:
         certResolver: "letsencrypt"
       encodedCharacters:
         allowEncodedSlash: true
         allowEncodedQuestionMark: true
-        
+
 serversTransport:
   insecureSkipVerify: true
 
 ping:
-  entryPoint: "web"  
+  entryPoint: "web"
