@@ -1,57 +1,27 @@
-api:
-  insecure: true
-  dashboard: true
+gerbil:
+    start_port: 51820
+    base_endpoint: "pangolin.example.com" # REPLACE WITH YOUR DASHBOARD DOMAIN
 
-providers:
-  http:
-    endpoint: "http://pangolin:3001/api/v1/traefik-config"
-    pollInterval: "5s"
-  file:
-    filename: "/etc/traefik/dynamic_config.yml"
+app:
+    dashboard_url: "https://pangolin.example.com" # REPLACE WITH YOUR DASHBOARD DOMAIN
+    log_level: "info"
+    telemetry:
+        anonymous_usage: true
 
-experimental:
-  plugins:
-    badger:
-      moduleName: "github.com/fosrl/badger"
-      version: "v1.4.0" # Check github.com/fosrl/badger for the latest release.
+domains:
+    domain1:
+        base_domain: "example.com" # REPLACE WITH YOUR BASE DOMAIN
 
-log:
-  level: "INFO"
-  format: "common"
-  maxSize: 100
-  maxBackups: 3
-  maxAge: 3
-  compress: true
+server:
+    secret: "replace-with-a-long-random-secret" # REPLACE WITH SECURE SECRET
+    cors:
+        origins: ["https://pangolin.example.com"] # REPLACE WITH YOUR DASHBOARD DOMAIN
+        methods: ["GET", "POST", "PUT", "DELETE", "PATCH"]
+        allowed_headers: ["X-CSRF-Token", "Content-Type"]
+        credentials: false
 
-certificatesResolvers:
-  letsencrypt:
-    acme:
-      httpChallenge:
-        entryPoint: web
-      email: "admin@example.com" # REPLACE
-      storage: "/letsencrypt/acme.json"
-      caServer: "https://acme-v02.api.letsencrypt.org/directory"
-
-entryPoints:
-  web:
-    address: ":80"
-  websecure:
-    address: ":443"
-    transport:
-      respondingTimeouts:
-        readTimeout: "30m"
-    # Uncomment to enable HTTP/3. You must also expose 443/udp in docker-compose.yml.
-    # http3:
-    #   advertisedPort: 443
-    http:
-      tls:
-        certResolver: "letsencrypt"
-      encodedCharacters:
-        allowEncodedSlash: true
-        allowEncodedQuestionMark: true
-
-serversTransport:
-  insecureSkipVerify: true
-
-ping:
-  entryPoint: "web"
+flags:
+    require_email_verification: false
+    disable_signup_without_invite: true
+    disable_user_create_org: false
+    allow_raw_resources: true
