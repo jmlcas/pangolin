@@ -1,6 +1,6 @@
 # Pangolin
 
-## Comandos para instalar el script:
+## Comandos para instalar con el script:
 
 ```
 $ curl -fsSL https://static.pangolin.net/get-installer.sh | bash
@@ -13,17 +13,13 @@ $ sudo ./installer
 
 Reemplaza estos valores antes de iniciar:
 
-pangolin.example.com - con el nombre de host de su panel de control
+pangolin.example.com - con el nombre de host de tu panel de control
 
-example.com - con su dominio base
+example.com - con tu dominio base
 
-replace-with-a-long-random-secret - con un fuerte secreto aleatorio
+replace-with-a-long-random-secret - genera un secreto con el comando : openssl rand -hex 32
 
 admin@example.com - en traefik_config.yml - tu correo electrónico de Let's Encrypt
-
------------------------------------
-
-Genera un secreto con el comando : openssl rand -hex 32
 
 -----------------------------------
 
@@ -32,8 +28,3 @@ Login:
 email: "admin@example.com" 
         
 password: "Password123!"
-
-
-
-
-
