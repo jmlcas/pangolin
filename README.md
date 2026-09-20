@@ -7,11 +7,6 @@ $ curl -fsSL https://static.pangolin.net/get-installer.sh | bash
 
 $ sudo ./installer
 ```
-<br>
-
-NOTA. Mira antes la versión actual: https://docs.fossorial.io/Getting%20Started/quick-install
-
-<br>
 
 
 ## Instalar con docker compose:
