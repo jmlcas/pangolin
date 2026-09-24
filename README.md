@@ -28,3 +28,11 @@ Login:
 email: "admin@example.com" 
         
 password: "Password123!"
+
+-------------------------
+
+Ver vídeos:
+
+[![Ver vídeo](https://img.youtube.com/vi/CGOOWF14LHs/0.jpg)](https://www.youtube.com/watch?v=CGOOWF14LHs)
+
+[![Ver vídeo](https://img.youtube.com/vi/kwmedcLZv_4/0.jpg)](https://www.youtube.com/watch?v=kwmedcLZv_4)
