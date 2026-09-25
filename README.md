@@ -6,6 +6,8 @@
 $ curl -fsSL https://static.pangolin.net/get-installer.sh | bash
 
 $ sudo ./installer
+
+$ sudo docker compose logs pangolin
 ```
 
 
